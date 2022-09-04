@@ -1,0 +1,2 @@
+# windows-storage-space-health-states-checker-written-in-powershell
+在使用Windows存储池的过程中，当存储池降级或出现警告时系统竟然无提醒，这导致数据丢失的风险大大增加。这个脚本的作用就是当作为计划任务随用户登陆运行时会检查
