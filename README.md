@@ -41,6 +41,7 @@ Startup parameters: -NonInteractive -WindowStyle Hidden -NoProfile "C:\users\abc
 # 脚本参数配置
 
 在#Parameter LOG部分：
+
 用户首次运行需要自定义如下参数
 set-location 'C:\Users\abc\'             #LOG文件存储路径
 
@@ -65,6 +66,9 @@ $LogFileName="StoragePool_Info_Log.txt"  #LOG文件名称
 
 # 踩坑记录
 
-1、文件编码要保存为 UTF-8 with BOM，否则中文MSGBOX乱码。 
+1、需要修改本地脚本执行策略，“Set-ExecutionPolicy RemoteSigned”否则本地脚本不运行
 
-2、get方法有时得不到结果，猜测可能是powershell不等待执行完成就执行下一条内容，所以脚本设计为第一次获取不到内容时间隔1s重试
+2、文件编码要保存为 UTF-8 with BOM，否则中文MSGBOX乱码 
+
+3、get方法有时得不到结果，猜测可能是powershell不等待执行完成就执行下一条内容，所以脚本设计为第一次获取不到内容时间隔1s重试
+
